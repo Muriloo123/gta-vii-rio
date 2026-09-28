@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1516" />
+    <title>GTA VII // Rio de Janeiro</title>
+  </head>
+  <body>
+    <div id="game"></div>
+    <main class="hud" aria-label="Interface do jogo">
+      <header class="brand">
+        <div class="brand-mark">VII</div>
+        <div>
+          <p class="eyebrow">Projeto cidade aberta</p>
+          <h1>Rio de Janeiro</h1>
+        </div>
+      </header>
+      <section class="mission-panel">
+        <div class="status-line"><span class="live-dot"></span> <span id="district">Copacabana</span></div>
+        <h2>Rota do horizonte</h2>
+        <p>Chegue ao mirante da orla.</p>
+        <div class="progress-track"><span id="mission-progress"></span></div>
+        <div class="mission-meta"><span>MISSÃO 01</span><strong id="distance">1.2 km</strong></div>
+      </section>
+      <footer class="footer-note">BETA BUILD <span>•</span> 07:42 PM <span>•</span> 23° C</footer>
+    </main>
+    <div class="crosshair" aria-hidden="true"><span></span></div>
+    <div class="toast" id="toast">Você chegou ao mirante.</div>
+    <div class="minimap-panel" aria-label="Mapa local do jogador">
+      <div class="minimap-label">Mapa local</div>
+      <div id="mini-map" class="mini-map">
+        <div class="mini-map-grid"></div>
+        <div id="mini-player" class="mini-player"></div>
+      </div>
+    </div>
+
+    <aside id="world-map" class="world-map hidden" aria-label="Mapa do Rio de Janeiro">
+      <div class="map-panel">
+        <div class="map-header">
+          <div>
+            <p class="eyebrow map-eyebrow">Mapa da cidade</p>
+            <h3>Rio de Janeiro</h3>
+          </div>
+          <button id="map-close" type="button" aria-label="Fechar mapa">✕</button>
+        </div>
+
+        <div class="map-stage">
+          <div class="map-surface">
+            <svg class="city-map-svg" viewBox="0 0 1000 700" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+              <path d="M40 560 C120 500, 150 420, 180 370 C230 300, 260 220, 330 190 C390 165, 440 150, 500 165 C560 180, 650 170, 720 210 C790 245, 840 290, 900 265 L940 240 L980 310 L952 420 L930 560 L760 610 L585 648 L350 626 L170 606 L40 560 Z" class="city-coast"/>
+              <path d="M165 270 C230 328, 260 390, 305 450 C340 500, 372 580, 435 610 C510 645, 642 635, 715 592 C770 560, 810 510, 850 470 C890 430, 905 360, 872 305 C835 245, 745 228, 660 230 C610 232, 565 225, 520 205 C450 175, 390 170, 335 185 C285 200, 220 220, 165 270 Z" class="city-land"/>
+
+              <path d="M148 300 L310 245 L315 470 L182 520 Z" class="district-line north"/>
+              <path d="M305 244 L468 214 L505 318 L377 442 L315 470 Z" class="district-line south"/>
+              <path d="M470 212 L626 245 L650 350 L552 460 L502 320 Z" class="district-line east"/>
+              <path d="M630 248 L824 280 L840 380 L710 440 L650 350 Z" class="district-line west"/>
+              <path d="M220 520 L425 520 L490 590 L328 610 Z" class="district-line center"/>
+              <path d="M510 520 L745 522 L810 592 L610 633 Z" class="district-line harbor"/>
+
+              <path d="M122 425 L430 410 L610 432 L920 390" class="major-road"/>
+              <path d="M182 300 L290 470 L455 565 L705 505 L860 336" class="major-road secondary"/>
+              <path d="M280 170 L350 328 L420 475 L495 625" class="major-road tertiary"/>
+              <path d="M620 190 L590 395 L548 620" class="major-road tertiary"/>
+              <path d="M770 280 L705 485 L630 612" class="major-road tertiary"/>
+
+              <path d="M160 200 L260 210 L380 160 L470 172 L570 148 L720 192 L892 260" class="rail-line"/>
+              <path d="M140 330 C180 370, 208 406, 240 430 C290 468, 330 484, 362 480" class="rail-line active"/>
+              <path d="M532 468 C566 482, 602 486, 640 474 C700 456, 760 432, 820 392" class="rail-line active"/>
+            </svg>
+
+            <div class="district district-1" data-name="Copacabana"><span>Copacabana</span></div>
+            <div class="district district-2" data-name="Ipanema"><span>Ipanema</span></div>
+            <div class="district district-3" data-name="Leblon"><span>Leblon</span></div>
+            <div class="district district-4" data-name="Centro"><span>Centro</span></div>
+            <div class="district district-5" data-name="Botafogo"><span>Botafogo</span></div>
+            <div class="district district-6" data-name="Barra"><span>Barra</span></div>
+            <div class="district district-7" data-name="Tijuca"><span>Tijuca</span></div>
+            <div class="district district-8" data-name="Flamengo"><span>Flamengo</span></div>
+            <div class="district district-9" data-name="Niterói"><span>Niterói</span></div>
+            <div class="district district-10" data-name="Paquetá"><span>Paquetá</span></div>
+            <div class="district district-11" data-name="Maracanã"><span>Maracanã</span></div>
+            <div class="district district-12" data-name="Gávea"><span>Gávea</span></div>
+            <div class="district district-13" data-name="Lapa"><span>Lapa</span></div>
+            <div class="district district-14" data-name="Urca"><span>Urca</span></div>
+            <div class="district district-15" data-name="São Gonçalo"><span>São Gonçalo</span></div>
+            <div class="district district-16" data-name="Ilha da Marambaia"><span>Ilha da Marambaia</span></div>
+            <div class="district district-17" data-name="Praia Vermelha"><span>Praia Vermelha</span></div>
+            <div class="district district-18" data-name="Caju"><span>Caju</span></div>
+          </div>
+
+          <aside class="map-legend">
+            <div>
+              <h4>Legenda</h4>
+              <ul>
+                <li><span class="dot beach"></span>Orla e praia</li>
+                <li><span class="dot urban"></span>Zona urbana</li>
+                <li><span class="dot green"></span>Parques e mata</li>
+                <li><span class="dot port"></span>Porto e mar</li>
+              </ul>
+            </div>
+
+            <div class="controls-menu">
+              <h4>Controles</h4>
+              <div class="control-list">
+                <div class="control-item"><kbd>W A S D</kbd><span>mover</span></div>
+                <div class="control-item"><kbd>SHIFT</kbd><span>correr</span></div>
+                <div class="control-item"><kbd>SPACE</kbd><span>pular</span></div>
+                <div class="control-item"><kbd>E</kbd><span>entrar no carro</span></div>
+                <div class="control-item"><kbd>F</kbd><span>sair do carro</span></div>
+                <div class="control-item"><kbd>R</kbd><span>reiniciar</span></div>
+                <div class="control-item"><kbd>V</kbd><span>câmera livre</span></div>
+                <div class="control-item"><kbd>M</kbd><span>abrir menu</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </aside>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
