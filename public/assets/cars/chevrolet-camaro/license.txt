@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chevrolet Camaro SS 2009
+* source:	https://sketchfab.com/3d-models/chevrolet-camaro-ss-2009-e0dc72a58f01413b8b9ba67e2bd09344
+* author:	andikapratamaw (https://sketchfab.com/andikapratamaw)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chevrolet Camaro SS 2009" (https://sketchfab.com/3d-models/chevrolet-camaro-ss-2009-e0dc72a58f01413b8b9ba67e2bd09344) by andikapratamaw (https://sketchfab.com/andikapratamaw) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

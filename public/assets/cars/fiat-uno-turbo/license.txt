@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fiat Uno Turbo I.E Mk2
+* source:	https://sketchfab.com/3d-models/fiat-uno-turbo-ie-mk2-56df35ff788e4c2a8ca59fcec5fe7158
+* author:	boitaloran (https://sketchfab.com/boitaloran)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fiat Uno Turbo I.E Mk2" (https://sketchfab.com/3d-models/fiat-uno-turbo-ie-mk2-56df35ff788e4c2a8ca59fcec5fe7158) by boitaloran (https://sketchfab.com/boitaloran) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
